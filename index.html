@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>凡人 · 角色造型集</title>
+<style>
+:root{color-scheme:light;--ink:#23282d;--muted:#707980;--line:#d7dce0;--paper:#f4f5f6}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}header{max-width:1440px;margin:auto;padding:56px 36px 26px}.eyebrow{letter-spacing:.22em;font-size:12px;color:var(--muted)}h1{font-size:42px;font-weight:500;letter-spacing:.1em;margin:14px 0}header p{color:var(--muted);line-height:1.8;font-size:14px;max-width:780px}.toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:24px}.switch{display:flex;border:1px solid var(--line);border-radius:99px;padding:4px;background:white}button,a{font:inherit}button{cursor:pointer;border:0;background:transparent;padding:10px 20px;border-radius:99px;color:var(--muted)}button.active{background:var(--ink);color:white}a{color:var(--ink);text-decoration:none}.link{padding:10px 16px;font-size:13px;border-bottom:1px solid var(--line)}main{max-width:1440px;padding:10px 36px 60px;margin:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 22px}.card{min-width:0}.art{display:block;width:100%;border-radius:12px;overflow:hidden;background:#e1e5e9;cursor:zoom-in;line-height:0}.art img{width:100%;height:auto;display:block;transition:transform .3s}.art:hover img{transform:scale(1.015)}.meta{padding:15px 3px}.meta strong{font-size:19px;font-weight:500}.meta small{font-size:11px;color:var(--muted);margin-left:10px;letter-spacing:.08em}.meta p{font-size:12px;color:var(--muted);margin:8px 0}.download{font-size:12px;display:inline-block;margin-top:4px;border-bottom:1px solid #b3bbc1;padding-bottom:3px}footer{max-width:1440px;margin:auto;padding:0 36px 32px;color:var(--muted);font-size:12px;line-height:1.8}dialog{width:min(1100px,96vw);max-height:96vh;padding:10px;border:0;border-radius:14px;background:#f1f3f5;overflow:auto}dialog::backdrop{background:#10141adb;backdrop-filter:blur(10px)}.modalbar{display:flex;justify-content:space-between;align-items:center;padding:4px 8px 10px}.modalbar button{background:white;color:#222}.modalimage{display:block;margin:auto;max-width:100%;max-height:82vh;object-fit:contain}.hint{font-size:12px;color:var(--muted)}@media(max-width:1000px){main{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:540px){header{padding:30px 18px 20px}h1{font-size:30px}main{padding:0 18px 30px;gap:18px 12px}.meta strong{font-size:17px}.meta small{display:none}.meta p{line-height:1.6}footer{padding:0 18px 26px}.link{padding:10px 6px}}
+</style>
+<header><div class="eyebrow">凡人修仙传 · COLLECTIBLE FIGURES · VOL. 01</div><h1>凡人 · 角色造型集</h1><p>八位角色，十六张成图。以动画造型为依据，统一为 Q 版立体手办与浅灰棚拍风格。点击图片查看大图。</p><div class="toolbar"><div class="switch"><button class="active" id="hero" onclick="setView('主视图')">主视图</button><button id="turn" onclick="setView('四视图')">四视图</button></div><a class="link" href="凡人修仙传-8人套图.zip" download>下载完整套图 ↓</a><a class="link" href="造型与来源.html">造型与来源</a><a class="link" href="生成提示词.html">生成提示词</a></div></header>
+<main id="grid"></main>
+<footer>四视图顺序：左上正面 → 右上朝右侧面 → 左下背面 → 右下朝左侧面。<br>依据参考制作的 Q 版二创；未展示部位含补全设计，属于展示转面图。</footer>
+<dialog id="viewer"><div class="modalbar"><span id="caption"></span><button onclick="viewer.close()" aria-label="关闭大图">关闭 ×</button></div><img id="full" class="modalimage" alt=""></dialog>
+<script>
+const people=[
+['01','梅凝','MEI NING','青绿衣装 · 蝶形金饰'],
+['02','韩立','HAN LI','黑袍负手 · 青竹蜂云剑'],
+['03','南宫婉','NANGONG WAN','落云常服 · 托腮'],
+['04','紫灵','ZI LING','妙音紫纱 · 拈纱'],
+['05','元瑶','YUAN YAO','黑袍银冠 · 施术'],
+['06','银月','YIN YUE','银发红绦 · 眨眼'],
+['07','陈巧倩','CHEN QIAOQIAN','越京青衣 · 拈花'],
+['08','慕沛灵','MU PEILING','青绿华服 · 抱臂']
+];let mode='主视图';const grid=document.querySelector('#grid');const viewer=document.querySelector('#viewer');
+function setView(m){mode=m;document.querySelector('#hero').classList.toggle('active',m==='主视图');document.querySelector('#turn').classList.toggle('active',m==='四视图');grid.innerHTML=people.map(([n,name,en,sub])=>{const file=n+'-'+name+'-'+mode+'.png';return '<article class="card"><a class="art" href="'+file+'" onclick="showImage(event,this.href,\''+name+' · '+mode+'\')"><img src="'+file+'?v=han9" alt="'+name+' '+mode+'" loading="lazy"></a><div class="meta"><strong>'+name+'</strong><small>'+en+'</small><p>'+sub+'</p><a class="download" href="'+file+'" download>下载'+mode+' ↗</a>'+(n==='02'?'<a class="download" style="margin-left:14px" href="韩立-参考对照.html">查看参考 ↗</a>':'')+'</div></article>'}).join('')}
+function showImage(e,url,title){e.preventDefault();document.querySelector('#full').src=url;document.querySelector('#full').alt=title;document.querySelector('#caption').textContent=title;viewer.showModal()}
+viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close()});setView(mode);if(location.protocol==='file:'){document.querySelector('a[href$=".zip"]').hidden=true}
+</script></html>

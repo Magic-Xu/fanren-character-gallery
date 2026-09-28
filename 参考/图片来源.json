@@ -1,0 +1,30 @@
+{
+  "南宫婉-设定": "https://k.sinaimg.cn/n/sinakd20118/88/w2048h3640/20251116/0b0f-ecff7d0c900cad17b701085a85168db1.jpg/w700d1q75cms.jpg",
+  "南宫婉-脸": "https://q2.itc.cn/q_70/images03/20260620/e95ba63825344f4fb0b048464b775c67.jpeg",
+  "紫灵-服装": "https://i0.hdslb.com/bfs/article/20c60064d50e6751e7e6adce0fa2a766513854709.jpg",
+  "紫灵-脸": "https://file.moyubuluo.com/d/file/2023-12-25/e24b15d0999d78729f5ee806bab58f97.jpg",
+  "元瑶-服装": "https://q7.itc.cn/images01/20240422/37d7a2fd9c1743569aa8deb6e89298e0.jpeg",
+  "元瑶-脸": "https://img.guomanbizhi.com/fanrenxiuxianzhuan/yuanyao-6ve0ju0.jpg",
+  "银月-全身": "https://q6.itc.cn/q_70/images03/20250705/e4db541e9f6c44b49316eec03154ec2a.jpeg",
+  "银月-脸": "https://q2.itc.cn/images01/20250705/481fc96db65f48f8888a4da4fdf26b53.jpeg",
+  "陈巧倩-花": "https://q9.itc.cn/images01/20240412/bea9df7c4ede4d3f9d95499d3fef9dba.jpeg",
+  "陈巧倩-越京": "https://p6.itc.cn/images01/20220529/4dd8ac16424c4c1caa0dd2af7da8f706.jpeg",
+  "银月-衣服": "https://q1.itc.cn/q_70/images03/20250705/ef58bfd00afd4653a12a08d5f3c298e9.jpeg",
+  "银月-半身": "https://q2.itc.cn/q_70/images03/20250705/96771fe8c3d94c179d508ce5244e0517.jpeg",
+  "慕沛灵-抱臂": "https://haowallpaper.com/link/common/file/previewFileImg/17435575400910208",
+  "慕沛灵-衣装": "https://haowallpaper.com/link/common/file/previewFileImg/17429289995193728",
+  "慕沛灵-用户原图": "用户提供的 慕佩玲8K_21_9_01.jpeg",
+  "韩立-用户指定脸与衣装": "用户提供的 fengleichi.jpeg，中央男性为本套韩立脸、束发与可见衣装依据",
+  "青竹蜂云剑-动画近景": "https://immortalascension.com/images/treasures/azure-bamboo-swords.jpg",
+  "青竹蜂云剑-竹节剑身": "https://static.wikia.nocookie.net/a-record-of-a-mortal-is-journey-to-immortality/images/6/6a/Bambpp_C%3Bpidswarm_Swords-2.png/revision/latest?cb=20250215163404",
+  "青竹蜂云剑-炼制片段": "https://pic.bstarstatic.com/ugc/7cc339bcbf2eaabfbacea10de051d906.jpeg",
+  "青竹蜂云剑-授权模型侧面": "https://img01.yzcdn.cn/upload_files/2026/08/25/FoR3BY5ljeVbyP5R8kabU9CDgxnS.jpg!middle.jpg",
+  "韩立-脸型与材质基准.png": {
+    "来源": "内置 image_gen 生成；已确认的脸部方向，仅作为后续成图的脸型与材质依据",
+    "原始依据": "韩立-用户指定脸与衣装.jpeg、韩立-黑袍气质参考.jpg"
+  },
+  "韩立-黑袍气质参考.jpg": {
+    "来源": "用户提供的 Southcity-XIII桌面-4K壁纸3.jpg",
+    "用途": "黑袍衣装与沉稳气质参考"
+  }
+}
